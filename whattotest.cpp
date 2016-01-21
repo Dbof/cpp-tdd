@@ -1,4 +1,6 @@
 #include<cmath>
+#include <iostream>
+#include <tuple>
 
 double squareRoot(const double a)
 {
@@ -7,3 +9,9 @@ double squareRoot(const double a)
         return sqrt(a);
 }
 
+
+int test()
+{
+        auto foo = std::make_tuple("bar", "foo", "can");
+        std::cout << std::get<0>(foo) << std::get<1>(foo) << std::get<2>(foo);
+} 
