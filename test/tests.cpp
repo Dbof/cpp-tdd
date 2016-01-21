@@ -1,4 +1,4 @@
-#include "whattotest.cpp"
+#include "whattotest.h"
 #include <gtest/gtest.h>
 
 TEST(SquareRootTest, PositiveNos)

@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.2)
+project(TEST)
 
 # from: https://stackoverflow.com/a/25836953
 # Check for C++11
-
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
@@ -14,11 +14,5 @@ else()
         message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
-# Locate GTest
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
- 
-# Link runTests with what we want to test and the GTest and pthread library
-add_executable(runTests tests.cpp)
-target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
-
+add_subdirectory(src)
+add_subdirectory(test)

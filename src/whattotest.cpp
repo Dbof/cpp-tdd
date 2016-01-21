@@ -2,6 +2,8 @@
 #include <iostream>
 #include <tuple>
 
+#include "whattotest.h"
+
 double squareRoot(const double a)
 {
         if (a < 0.0)
