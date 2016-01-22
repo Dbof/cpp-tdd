@@ -1,3 +1,3 @@
-add_library (TestThis whattotest.cpp whattotest.h)
+add_library (Timer timer.cpp timer.h)
 add_executable (demo main.cpp)
-target_link_libraries (demo TestThis)
+target_link_libraries (demo Timer)
